@@ -3,11 +3,9 @@ html {
 }
 
 body {
-    background: url('/media/pexels-jane-doan-1132047.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
+
     color: #555;
-    font-family: 'Lato';
+    font-family: 'Poppins';
 }
 
 /* from Bulma */
@@ -17,6 +15,7 @@ body {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
+    
 }
 
 .logo-font {
@@ -49,11 +48,70 @@ body {
 }
 
 .text-black {
-    color: #000 !important;
+    color: #fff !important;
 }
 
 .border-black {
     border: 1px solid black !important;
+}
+
+
+/** Carousel **/
+html,
+body {
+    height: 100vh;
+}
+
+.carousel-inner {
+    position: relative;
+    height: 100vh;
+    z-index: 1;
+}
+
+.carousel-indicators-extension {
+    z-index: 9000;
+}
+
+.carousel-text-box-1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    position: absolute;
+    top: 35%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 15%;
+    color: #fff;
+    text-align: center;
+}
+
+.text-shadow-carousel {
+    text-shadow: 1.5px 1.5px #303030;
+}
+
+/** About **/
+.bg-about {
+    background-color: #b75d69 !important;
+    color: white;
+    padding: 6rem 0;
+}
+
+.page-section {
+    padding: 4rem 0;
+}
+
+.bg-why-choose-us {
+    background-color: #eacdc2 !important;
+}
+
+.about-icon {
+    font-size: 35px;
+}
+
+.liner-text {
+    position: relative;
+    background: linear-gradient(to bottom, #ffffff00 85%, #f5e6e1 15%);
+    width: 80%;
+    left: 15%;
 }
 
 /* -------------------------------- Media Queries */
