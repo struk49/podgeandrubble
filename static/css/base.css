@@ -3,9 +3,11 @@ html {
 }
 
 body {
-
+	background: url('/media/carrots-1.png') no-repeat center center fixed;
+	background-size: cover;
+    height: calc(100vh - 164px);
     color: #555;
-    font-family: 'Poppins';
+    font-family: "Lato";
 }
 
 /* from Bulma */
@@ -47,6 +49,7 @@ body {
     color: white;
 }
 
+
 .text-black {
     color: #fff !important;
 }
@@ -55,44 +58,18 @@ body {
     border: 1px solid black !important;
 }
 
-
-/** Carousel **/
-html,
-body {
-    height: 100vh;
+.bg-black{
+    background-color: black !important;
 }
 
-.carousel-inner {
-    position: relative;
-    height: 100vh;
-    z-index: 1;
-}
-
-.carousel-indicators-extension {
-    z-index: 9000;
-}
-
-.carousel-text-box-1 {
-    font-size: 1.5rem;
-    letter-spacing: 0.1em;
-    position: absolute;
-    top: 35%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    right: 15%;
-    color: #fff;
-    text-align: center;
-}
-
-.text-shadow-carousel {
-    text-shadow: 1.5px 1.5px #303030;
-}
 
 /** About **/
-.bg-about {
+.about {
     background-color: #e8581f !important;
     color: white;
     padding: 6rem 0;
+    font-size: large;
+
 }
 
 .page-section {
@@ -114,6 +91,10 @@ body {
     color: #fff;
     width: 80%;
     left: 15%;
+}
+
+.contact{
+    background-color: #c45adc;
 }
 
 footer{
@@ -160,4 +141,9 @@ footer{
     .header-container {
         padding-top: 164px;
     }
+    .footer{
+        width: 100%;
+    }
 }
+
+
