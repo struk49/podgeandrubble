@@ -90,7 +90,7 @@ body {
 
 /** About **/
 .bg-about {
-    background-color: #b75d69 !important;
+    background-color: #e8581f !important;
     color: white;
     padding: 6rem 0;
 }
@@ -100,18 +100,41 @@ body {
 }
 
 .bg-why-choose-us {
-    background-color: #eacdc2 !important;
+    background-color: #64101f !important;
+    color: #fff;
 }
 
 .about-icon {
     font-size: 35px;
+    color: #222;
 }
 
 .liner-text {
     position: relative;
-    background: linear-gradient(to bottom, #ffffff00 85%, #f5e6e1 15%);
+    color: #fff;
     width: 80%;
     left: 15%;
+}
+
+footer{
+    height: 150px;
+    background-color: darkgoldenrod;
+}
+
+.social-networks{
+    text-align: center;
+
+}
+
+.social-networks li{
+    display: inline;
+}
+
+.social-networks i{
+    font-size: 160%;
+    margin: 1%;
+    padding: 5%;
+    color: #f4efef
 }
 
 /* -------------------------------- Media Queries */
