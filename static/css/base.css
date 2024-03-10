@@ -65,7 +65,7 @@ body {
 
 /** About **/
 .about {
-    background-color: #e8581f !important;
+    background-color: black !important;
     color: white;
     padding: 6rem 0;
     font-size: large;
@@ -83,7 +83,7 @@ body {
 
 .about-icon {
     font-size: 35px;
-    color: #222;
+    color: black;
 }
 
 .liner-text {
@@ -99,7 +99,7 @@ body {
 
 footer{
     height: 200px;
-    background-color: darkgoldenrod;
+    background-color: black;
 }
 
 .social-networks{
