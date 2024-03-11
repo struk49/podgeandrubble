@@ -3,11 +3,7 @@ html {
 }
 
 body {
-	background: url('/media/carrots-1.png') no-repeat center center fixed;
-	background-size: cover;
-    height: calc(100vh - 164px);
-    color: #555;
-    font-family: "Lato";
+	
 }
 
 /* from Bulma */
@@ -62,6 +58,37 @@ body {
     background-color: black !important;
 }
 
+/** Carousel **/
+html,
+body {
+    height: 700px;
+}
+
+.carousel-inner {
+    position: relative;
+    height: 700px;
+    z-index: 1;
+}
+
+.carousel-indicators-extension {
+    z-index: 9000;
+}
+
+.carousel-text-box-1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    position: absolute;
+    top: 35%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 15%;
+    color: #fff;
+    text-align: center;
+}
+
+.text-shadow-carousel {
+    text-shadow: 1.5px 1.5px #303030;
+}
 
 /** About **/
 .about {
