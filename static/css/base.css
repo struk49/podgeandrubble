@@ -41,7 +41,7 @@ body {
 
 .btn-black {
     background: black;
-    color: black;
+    color: #fff;
 }
 
 .btn-yellow {
@@ -71,14 +71,14 @@ body {
 }
 
 .bg-black{
-    background-color: black !important;
+    background-color: #141414;
 }
 
 
 
 /** About **/
 .about {
-    background-color: black !important;
+    background-color: #141414 !important;
     color: white;
     padding: 6rem 0;
     font-size: large;
@@ -114,7 +114,7 @@ body {
 
 footer{
     height: 200px;
-    background-color: black;
+    background-color: #141414;
 }
 
 .social-networks{
@@ -141,16 +141,13 @@ footer{
   .container {
     max-width: 80%;
   }
-  
 }
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 540px) {
     .fixed-top-desktop-only {
         position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
+        margin: 0 auto;
         z-index: 1030;
     }
 
@@ -159,10 +156,9 @@ footer{
     }
     body {
         background-size: cover;
-        background-color: black;
+        background-color: #141414;
         height: 700px;
         width: 100%;
-        color: #555;
         background:  url('/media/podge-and-rubble-1d.png')no-repeat;
       }
     .footer{
