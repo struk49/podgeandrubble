@@ -156,18 +156,15 @@ footer{
   .container {
     max-width: 80%;
   }
+ 
 }
 
 /* fixed top navbar only on medium and up */
-@media (min-width: 540px) {
+@media (min-width: 600px) {
     .fixed-top-desktop-only {
         position: fixed;
         margin: 0 auto;
         z-index: 1030;
-    }
-
-    .header-container {
-        padding-top: 164px;
     }
     body {
         background-size: cover;
@@ -176,7 +173,22 @@ footer{
         width: 100%;
         background:  url('/media/podge-and-rubble-1d.png')no-repeat;
       }
+      .header-container {
+        padding-top: 200px;
+    }
+    
     .footer{
         width: 100%;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 500px) {
+    .header-container {
+        padding-top: 250px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
     }
 }
