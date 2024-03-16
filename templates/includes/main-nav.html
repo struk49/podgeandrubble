@@ -1,42 +1,43 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Fruit and veg
+            <a class="logo-font font-weight-bold nav-link bg-black text-white mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All Products
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
-                <a href="" class="dropdown-item ">By Category</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+            <div class="dropdown-menu border-0 bg-black text-white" aria-labelledby="all-products-link">
+                <a href="" class="dropdown-item text-white">By Price</a>
+                <a href="" class="dropdown-item text-white">By Rating</a>
+                <a href="" class="dropdown-item text-white">By Category</a>
+                <a href="{% url 'products' %}" class="dropdown-item text-white">All Products</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="boxes-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Fruit and veg boxes
+            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All boxes
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="boxes-link">
-                <a href="{% url 'products' %}?category=veg-and-fruit-boxes" class="dropdown-item">All veg boxes</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="fruit-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Fruit
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="fruit-link">
-                <a href="{% url 'products' %}?category=fruit" class="dropdown-item">All fruit</a>
+            <div class="dropdown-menu bg-black border-0" aria-labelledby="clothing-link">
+                <a href="{% url 'products' %}?category=veg-and-fruit-boxes" class="dropdown-item text-white">All fruit and veg boxes</a>
                
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white" href="#" id="veg-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Veg
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="veg-link">
-                <a href="{% url 'products' %}?category=veg" class="dropdown-item">All veg </a>
+            <div class="dropdown-menu bg-black border-0" aria-labelledby="homeware-link">
+                <a href="{% url 'products' %}?category=veg" class="dropdown-item text-white">All veg</a>
+               
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link bg-black text-white" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Fruit
+            </a>
+            <div class="dropdown-menu border-0 bg-black" aria-labelledby="specials-link">
+                <a href="{% url 'products' %}?category=fruit" class="dropdown-item text-white">All fruit</a>
                 
             </div>
         </li>

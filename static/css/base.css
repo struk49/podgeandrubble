@@ -20,14 +20,7 @@ body {
     display: inline-flex;
     justify-content: center;
     height: 1.5rem;
-    width: 1.5rem;
-
-    
-}
-
-#collapse{
-
-    color: #fff;
+    width: 1.5rem;  
 }
 
 .logo-font {
@@ -53,7 +46,7 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background: black;
     color: white;
 }
 
