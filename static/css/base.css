@@ -96,6 +96,14 @@ body {
     background: #64101f ;
     color: #fff;
 }
+
+span a {
+    color: #64101f;
+}
+
+span a:hover {
+    color: #64101f;
+}
 /** About **/
 .about {
     background-color: #141414 !important;
