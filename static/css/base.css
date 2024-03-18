@@ -92,7 +92,10 @@ body {
     color: white !important;
 }
 
-
+.btn-maroon {
+    background: #64101f ;
+    color: #fff;
+}
 /** About **/
 .about {
     background-color: #141414 !important;
