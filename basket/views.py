@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.contrib import messages
 
-# Create your views here.
+from products.models import Product
+
+
 
 def view_basket(request):
     """ A view that renders the basket contents page """
@@ -12,22 +15,22 @@ def add_to_basket(request, item_id):
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
-    size = None
-    if 'product_size' in request.POST:
-        size = request.POST['product_size']
+    color = None
+    if 'product_color' in request.POST:
+        color = request.POST['product_color']
     basket = request.session.get('basket', {})
 
-    if size:
+    if color:
         if item_id in list(basket.keys()):
-            if size in basket[item_id]['items_by_size'].keys():
-                basket[item_id]['items_by_size'][size] += quantity
+            if color in basket[item_id]['items_by_color'].keys():
+                basket[item_id]['items_by_color'][color] += quantity
             else:
-                basket[item_id]['items_by_size'][size] = quantity
+                basket[item_id]['items_by_color'][color] = quantity
         else:
-            basket[item_id] = {'items_by_size': {size: quantity}}
+            basket[item_id] = {'items_by_color': {color: quantity}}
     else:
         if item_id in list(basket.keys()):
-            basket[item_id] += quantity
+            bag[item_id] += quantity
         else:
             basket[item_id] = quantity
 
@@ -39,18 +42,18 @@ def adjust_basket(request, item_id):
     """Adjust the quantity of the specified product to the specified amount"""
 
     quantity = int(request.POST.get('quantity'))
-    size = None
-    if 'product_size' in request.POST:
-        size = request.POST['product_size']
+    color = None
+    if 'product_color' in request.POST:
+        color = request.POST['product_color']
     basket = request.session.get('basket', {})
 
-    if size:
+    if color:
         if quantity > 0:
-            basket[item_id]['items_by_size'][size] = quantity
+            basket[item_id]['items_by_color'][color] = quantity
         else:
-            del basket[item_id]['items_by_size'][size]
-            if not basket[item_id]['items_by_size']:
-                bag.pop(item_id)
+            del basket[item_id]['items_by_color'][color]
+            if not basket[item_id]['items_by_color']:
+                basket.pop(item_id)
     else:
         if quantity > 0:
             basket[item_id] = quantity
@@ -65,14 +68,15 @@ def remove_from_basket(request, item_id):
     """Remove the item from the shopping basket"""
 
     try:
-        size = None
+        color = None
         if 'product_size' in request.POST:
-            size = request.POST['product_size']
-        bagsket= request.session.get('basket', {})
+            color = request.POST['product_color']
+        basket = request.session.get('basket', {})
 
-        if size:
-            del basket[item_id]['items_by_size'][size]
-            if not basket[item_id]['items_by_size']:
+        if color:
+            del bag
+            sket[item_id]['items_by_color'][color]
+            if not basket[item_id]['items_by_color']:
                 basket.pop(item_id)
         else:
             basket.pop(item_id)
