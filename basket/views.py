@@ -13,6 +13,7 @@ def view_basket(request):
 def add_to_basket(request, item_id):
     """ Add a quantity of the specified product to the shopping basket """
 
+    product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     color = None
@@ -33,6 +34,7 @@ def add_to_basket(request, item_id):
             basket[item_id] += quantity
         else:
             basket[item_id] = quantity
+            messages.success(request, f'Added {product.name} to your basket')
 
     request.session['basket'] = basket
     return redirect(redirect_url)
