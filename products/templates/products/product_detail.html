@@ -29,7 +29,7 @@
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ product.name }}</p>
-                    <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
                     {% if product.category %}
                     <p class="small mt-1 mb-0">
                         <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
@@ -38,7 +38,7 @@
                     </p>
                     {% endif %}
                     {% if product.rating %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 9</small>
                     {% else %}
                         <small class="text-muted">No Rating</small>
                     {% endif %}
@@ -74,10 +74,11 @@
                                     </div>
                                 </div>
                             </div>
+                        </form>
                             <div class="mb-3 mt-3">
                                 <div class="ml-3 mt-2 mb-2">
                                     <span>Customer Average Store: 
-                                        <span class="store-text-large">{{ average_score }} / 5.0</span>
+                                        <span class="store-text-large">{{ average_score }} / 9.0</span>
                                     </span>
                                     <span class="stars-outer">
                                         <span class="stars-inner" style=""></span>
@@ -90,29 +91,30 @@
                                             <div class="collapsed review_click_arrow_1" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" role="button">
                                                 <h6 class="mb-0">View Reviews <i class="fas fa-chevron-down"></i></h6>
                                             </div>
+                                            
                                         </div>
                                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                                             <div class="card-body">
                                                 {% if product_reviews %}
                                                     {% for review in review_products %}
                                                         <div>
-                                                            <span>{{ review.review_title }}  </span>
+                                                            <span>{{ product_reviews.review_title }}  </span>
                                                             <span class="stars-outer">
                                                                 <span class="stars-inner" style=""></span>
                                                             </span>
                                                         </div>
                                                         <div>
-                                                            {{ review.review_date }}
+                                                            {{ product_reviews.review_date }}
                                                         </div>
                                                         <div>
-                                                            {% if request.user.is_authenticated %}
+                                                            {% if request.user.is_superuser%}
                                                                 {% if user.name == review.user_id %}
                                                                     <a href="" class="product_delete">Delete Review</a>
                                                                 {% endif %}
                                                             {% endif %}
                                                         </div>
                                                         <div>
-                                                            {{ review.review_comment }}
+                                                            {{ product_reviews }}
                                                         </div>
                                                         <hr>
                                                     {% endfor %}
