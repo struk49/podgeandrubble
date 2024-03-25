@@ -80,9 +80,7 @@
                                     <span>Customer Average Store: 
                                         <span class="store-text-large">{{ average_score }} / 9.0</span>
                                     </span>
-                                    <span class="stars-outer">
-                                        <span class="stars-inner" style=""></span>
-                                    </span>
+                                   
                                 </div>
                                 <hr>
                                 <div id="accordion">
@@ -96,15 +94,20 @@
                                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                                             <div class="card-body">
                                                 {% if product_reviews %}
-                                                    {% for review in review_products %}
+                                                    {% for review in product_reviews %}
                                                         <div>
-                                                            <span>{{ product_reviews.review_title }}  </span>
+                                                            <span>{{ review.review_title }}  </span>
                                                             <span class="stars-outer">
-                                                                <span class="stars-inner" style=""></span>
+                                                                <span class="stars-inner" style="width: {{ review.review_rate }}"></span>
                                                             </span>
                                                         </div>
+                                                        <hr>
                                                         <div>
-                                                            {{ product_reviews.review_date }}
+                                                            {{ review.review_comment }}
+                                                        </div>
+                                                        <hr>
+                                                        <div>
+                                                            {{ review.review_date }}
                                                         </div>
                                                         <div>
                                                             {% if request.user.is_superuser%}
@@ -114,7 +117,7 @@
                                                             {% endif %}
                                                         </div>
                                                         <div>
-                                                            {{ product_reviews }}
+                                                            
                                                         </div>
                                                         <hr>
                                                     {% endfor %}
