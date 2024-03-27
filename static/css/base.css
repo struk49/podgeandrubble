@@ -111,6 +111,10 @@ span a:hover {
     background: #141414;
     color: #fff;
 }
+
+.dropdown-menu {
+    color: #fff;
+}
 /** About **/
 .about {
     background-color: #141414 !important;
