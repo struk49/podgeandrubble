@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from itertools import chain
 from functools import reduce
@@ -85,3 +86,20 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+@login_required
+def delete_review(request, review_pk):
+    """
+    Delete a review posted by the user
+    """
+    review = get_object_or_404(ProductReview, pk=review_pk)
+    product_id = review.product_id.pk
+    review.delete()
+
+    if 'last_item' in request.session:
+        del request.session['last_item']
+
+    messages.success(request,
+                     'Succesfully deleted your review.')
+    return redirect(product_detail, product_id)

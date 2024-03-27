@@ -110,9 +110,9 @@
                                                             {{ review.review_date }}
                                                         </div>
                                                         <div>
-                                                            {% if request.user.is_superuser%}
+                                                            {% if request.user.is_authenticated %}
                                                                 {% if user.name == review.user_id %}
-                                                                    <a href="" class="product_delete">Delete Review</a>
+                                                                    <a href="{% url 'delete_review' review.pk %}" class="product_delete">Delete Review</a>
                                                                 {% endif %}
                                                             {% endif %}
                                                         </div>
@@ -142,7 +142,7 @@
                                                             {% csrf_token %}
                                                             {{ product_review_form| crispy }}
                                                             {{ ProductReviewForm|crispy}}
-                                                            <button class="btn btn-colour-1" action="submit" aria-label="Product Review Submit Button">Submit Review</button>
+                                                            <button class="btn-white" action="submit" aria-label="Product Review Submit Button">Submit Review</button>
                                                         </form>
                                                     </div>
                                                 </div>
