@@ -1,0 +1,8 @@
+#id_defualt_country
+#id_defualt_country.option:not(first-child) {
+    color: #000;
+}
+
+#id_defualt_country.option:first-child {
+    color: #555;
+}
