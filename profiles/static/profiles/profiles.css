@@ -6,3 +6,8 @@
 #id_defualt_country.option:first-child {
     color: #555;
 }
+
+.order-history {
+    max-height: 416px;
+    overflow-y: auto;
+}

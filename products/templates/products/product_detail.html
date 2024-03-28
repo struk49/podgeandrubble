@@ -93,7 +93,7 @@
                                         </div>
                                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                                             <div class="card-body">
-                                                {% if product_reviews %}
+                                                {% if product_reviews and not on_profile_page %}
                                                     {% for review in product_reviews %}
                                                         <div>
                                                             <span>{{ review.review_title }}  </span>
@@ -163,7 +163,7 @@
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Basket">
+                                <input type="submit" class="btn btn-maroon rounded-0 text-uppercase mt-5" value="Add to Basket">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             
