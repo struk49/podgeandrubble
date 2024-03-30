@@ -1,5 +1,5 @@
 from django import forms
-from .models import Product, ProductReview
+from .models import Product,Category, ProductReview
 
 
 class ProductForm(forms.ModelForm):
@@ -13,7 +13,7 @@ class ProductReviewForm(forms.ModelForm):
         model = ProductReview
         fields = ('rating_score', 'review_title', 'review_comment')
 
-class ProductForm(forms.ModelForm):
+class ProduceForm(forms.ModelForm):
 
     class Meta:
         model = Product
