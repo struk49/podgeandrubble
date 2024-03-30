@@ -103,9 +103,19 @@ def delete_review(request, review_pk):
                      'Succesfully deleted your review.')
     return redirect(product_detail, product_id)
 
-def add_produce(request):
+def add_product(request):
     """ Add a product to the store """
-    form = ProductForm()
+    if request.method == 'POST':
+        form = ProduceForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added product!')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+    else:
+        form = ProduceForm()
+        
     template = 'products/add_produce.html'
     context = {
         'form': form,
