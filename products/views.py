@@ -2,14 +2,12 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db.models import Q
-from itertools import chain
-from functools import reduce
-import operator
-from django.db.models import Avg
+from django.db.models.functions import Lower
+
 
 from .models import Product, Category, ProductReview
 
-from .forms import ProductForm, ProductReviewForm
+from .forms import ProductForm, ProductReviewForm, ProduceForm
 
 # Create your views here.
 
@@ -104,3 +102,13 @@ def delete_review(request, review_pk):
     messages.success(request,
                      'Succesfully deleted your review.')
     return redirect(product_detail, product_id)
+
+def add_produce(request):
+    """ Add a product to the store """
+    form = ProductForm()
+    template = 'products/add_produce.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
