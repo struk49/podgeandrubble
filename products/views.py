@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.db.models import Avg
 
 
 from .models import Product, Category, ProductReview
@@ -103,6 +104,7 @@ def delete_review(request, review_pk):
                      'Succesfully deleted your review.')
     return redirect(product_detail, product_id)
 
+
 def add_product(request):
     """ Add a product to the store """
     if request.method == 'POST':
@@ -136,7 +138,7 @@ def edit_product(request, product_id):
         else:
             messages.error(request, 'Failed to update product. Please ensure the form is valid.')
     else:
-        form = ProduceForm(instance=product)
+        form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
 
     template = 'products/edit_produce.html'
@@ -146,3 +148,11 @@ def edit_product(request, product_id):
     }
 
     return render(request, template, context)
+
+
+def delete_product(request, product_id):
+    """ Delete a product from the store """
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.success(request, 'Product deleted!')
+    return redirect(reverse('products'))
