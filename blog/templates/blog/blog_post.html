@@ -37,19 +37,16 @@
                                 <div class="card-body pb-0">
                                     <p class="mb-0">{{ post.name }}</p>
                                 </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
-                                    <div class="row">
-                                        <div class="col">
+
+                                            {% if request.user.is_superuser %}
+                                                <small class="ml-3">
+                                                    <a href="{% url 'edit_post' post.id %}">Edit Post</a> | 
+                                                    <a class="text-danger" href="{% url 'delete_post' post.id %}">Delete Post</a>
+                                                </small>
+                                            {% endif %}
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {% if forloop.counter|divisibleby:1 %}
-                            <div class="col-12 d-sm-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}                        
+                                    </div> 
+
                         {% if forloop.counter|divisibleby:2 %}
                             <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
                                 <hr>

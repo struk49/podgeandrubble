@@ -62,7 +62,7 @@ def edit_post(request, post_id):
             messages.success(request, 'Successfully updated post!')
             return redirect(reverse('blog_detail', args=[post.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update post. Please ensure the form is valid.')
     else:
         form = BlogForm(instance=post)
         messages.info(request, f'You are editing {post.name}')
@@ -74,3 +74,11 @@ def edit_post(request, post_id):
     }
 
     return render(request, template, context)
+
+
+def delete_post(request, post_id):
+    """ Delete a post from the store """
+    post = get_object_or_404(Blog_post, pk=post_id)
+    post.delete()
+    messages.success(request, 'Post deleted!')
+    return redirect(reverse('posts'))
