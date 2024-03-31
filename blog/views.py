@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Blog_post
 
+from .forms import BlogForm
+
 # Create your views here.
 
 def all_posts(request):
@@ -25,3 +27,14 @@ def blog_detail(request, post_id):
     }
 
     return render(request, 'blog/blog_detail.html', context)
+
+
+def add_post(request):
+    """ Add a product to the store """
+    form = BlogForm()
+    template = 'blog/add_post.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
