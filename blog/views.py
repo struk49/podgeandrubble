@@ -1,6 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Blog_post
+from django.contrib import messages
 
+from .models import Blog_post, Category
 from .forms import BlogForm
 
 # Create your views here.
@@ -45,6 +47,30 @@ def add_post(request):
     template = 'blog/add_post.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+
+def edit_post(request, post_id):
+    """ Edit a post in the store """
+    post = get_object_or_404(Blog_post, pk=post_id)
+    if request.method == 'POST':
+        form = BlogForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated post!')
+            return redirect(reverse('blog_detail', args=[post.id]))
+        else:
+            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+    else:
+        form = BlogForm(instance=post)
+        messages.info(request, f'You are editing {post.name}')
+
+    template = 'blog/edit_post.html'
+    context = {
+        'form': form,
+        'post': post,
     }
 
     return render(request, template, context)
