@@ -6,7 +6,7 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?category=fish" class="dropdown-item font-weight-bold">Fish</a>
-              
+              </div>
         </li>
 
         <li class="nav-item dropdown">
@@ -38,6 +38,14 @@
                 
             </div>
         </li>
-    </div>
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-white" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Blog
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
+                <a href="{% url 'posts' %}?category=posts" class="dropdown-item font-weight-bold">Posts</a>
+                
+            </div>
+        </li>
     </ul>
 </div>
