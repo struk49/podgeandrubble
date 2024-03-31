@@ -102,9 +102,12 @@ body {
 span a {
     color: #64101f;
 }
-
 span a:hover {
     color: #64101f;
+}
+
+.product-details-container {
+    max-width: 1100px;
 }
 
 .card-body {
