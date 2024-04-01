@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-n&9i4rdxmq6jt#pv$3ut)&1n^$_$ev)32572_5=j4z+6a585ir
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['podgeandrubbleveg-3192dfebb79e.herokuapp.com/', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['podgeandrubbleveg.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -110,7 +110,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
@@ -185,7 +185,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-FREE_DELIVERY_THRESHOLD = 20
+FREE_DELIVERY_THRESHOLD = 10
 STANDARD_DELIVERY_PERCENTAGE = 10
 MINIMUM_DELIVERY_CHARGE = 2.5
 STRIPE_CURRENCY = 'gbp'
