@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-n&9i4rdxmq6jt#pv$3ut)&1n^$_$ev)32572_5=j4z+6a585ir
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['podgeandrubble-1f49cce16286.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['podgeandrubbleveg.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -185,7 +185,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-FREE_DELIVERY_THRESHOLD = 15
+FREE_DELIVERY_THRESHOLD = 10
 STANDARD_DELIVERY_PERCENTAGE = 10
 MINIMUM_DELIVERY_CHARGE = 2.5
 STRIPE_CURRENCY = 'gbp'
