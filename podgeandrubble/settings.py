@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'w-+r8audnz%d%ixuq#u+0vm*2#__lb7c+np@*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['podgeandrubble-3192dfebb79e.herokuapp.com/', 'localhost', '8000-struk49-podgeandrubble-jy6kenozoia.ws-eu110.gitpod.io']
+ALLOWED_HOSTS = ['podgeandrubbleveg.herokuapp.com/', 'localhost', '8000-struk49-podgeandrubble-jy6kenozoia.ws-eu110.gitpod.io']
 
 
 # Application definition
@@ -133,6 +133,7 @@ else:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
+
 
 
 
