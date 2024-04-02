@@ -215,3 +215,7 @@ STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 DEFAULT_FROM_EMAIL = 'podgeandrubble@example.com'
 
+print(STRIPE_WH_SECRET)
+print(STRIPE_SECRET_KEY)
+print(STRIPE_PUBLIC_KEY)
+
