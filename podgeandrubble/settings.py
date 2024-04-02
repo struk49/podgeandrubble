@@ -188,7 +188,6 @@ if 'USE_AWS' in os.environ:
         'CacheControl': 'max-age=94608000',
     }
 
-if 'USE_AWS' in os.environ:
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'podgeandrubbleveg'
     AWS_S3_REGION_NAME = 'eu-west-1'
