@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'w-+r8audnz%d%ixuq#u+0vm*2#__lb7c+np@*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['podgeandrubbleveg-3192dfebb79e.herokuapp.com', 'localhost', '8000-struk49-podgeandrubble-phcqytohlif.ws-eu110.gitpod.io']
+ALLOWED_HOSTS = ['podgeandrubbleveg-3192dfebb79e.herokuapp.com', 'localhost', '8000-struk49-podgeandrubble-egfu9c7hr4i.ws-eu110.gitpod.io']
 
 
 # Application definition
@@ -180,6 +180,13 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+if 'USE_AWS' in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
 
 if 'USE_AWS' in os.environ:
     # Bucket Config
