@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'w-+r8audnz%d%ixuq#u+0vm*2#__lb7c+np@*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['podgeandrubbleveg-1f49cce16286.herokuapp.com', 'localhost', '8000-struk49-podgeandrubble-xjeeyoghr9i.ws-eu110.gitpod.io']
+ALLOWED_HOSTS = ['podgeandrubbleveg-1f49cce16286.herokuapp.com', 'localhost', '8000-struk49-podgeandrubble-phcqytohlif.ws-eu110.gitpod.io']
 
 
 # Application definition
@@ -170,7 +170,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
@@ -203,6 +203,7 @@ if 'USE_AWS' in os.environ:
 # Stripe
 FREE_DELIVERY_THRESHOLD = 10
 STANDARD_DELIVERY_PERCENTAGE = 10
+MINIMUM_DELIVERY_CHARGE = 2.5
 STRIPE_CURRENCY = 'usd'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
