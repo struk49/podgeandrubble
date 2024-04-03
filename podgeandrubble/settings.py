@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'w-+r8audnz%d%ixuq#u+0vm*2#__lb7c+np@*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['podgeandrubbleveg-3192dfebb79e.herokuapp.com', 'localhost', '8000-struk49-podgeandrubble-egfu9c7hr4i.ws-eu110.gitpod.io']
+ALLOWED_HOSTS = ['podgeandrubbleveg-3192dfebb79e.herokuapp.com', 'localhost', '8000-struk49-podgeandrubble-8nuztugkt34.ws-eu110.gitpod.io']
 
 
 # Application definition
@@ -123,9 +123,9 @@ WSGI_APPLICATION = 'podgeandrubble.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-if 'HEROKU_POSTGRESQL_BROWN_URL' in os.environ:
+if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('HEROKU_POSTGRESQL_BROWN_URL'))
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 else:
     DATABASES = {
@@ -134,6 +134,7 @@ else:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
+
 
 
 
