@@ -31,7 +31,7 @@ def add_to_basket(request, item_id):
                 messages.success(request, f'Added color {color.upper()} {product.name} to your basket')
         else:
             basket[item_id] = {'items_by_color': {color: quantity}}
-            messages.success(request, f'Added color {collr.upper()} {product.name} to your basket')
+            messages.success(request, f'Added color {color.upper()} {product.name} to your basket')
     else:
         if item_id in list(basket.keys()):
             basket[item_id] += quantity
