@@ -23,7 +23,7 @@ def add_to_basket(request, item_id):
 
     if color:
         if item_id in list(basket.keys()):
-            if color in bag[item_id]['items_by_color'].keys():
+            if color in basket[item_id]['items_by_color'].keys():
                 basket[item_id]['items_by_color'][color] += quantity
                 messages.success(request, f'Updated color {color.upper()} {product.name} quantity to {basket[item_id]["items_by_color"][color]}')
             else:
