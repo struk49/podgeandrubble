@@ -63,6 +63,21 @@ Image of sign in page with form.
 
 ![Screenshot 2024-04-08 11 31 24](https://github.com/struk49/podgethecat/assets/115653854/cc1ffe0e-371f-49c7-a868-1490a6f05d48)
 
+### This is a image of the sopping basket page.
+
+![Screenshot 2024-04-08 11 43 04](https://github.com/struk49/podgethecat/assets/115653854/902ff1d1-13ec-471b-a97d-b88e04c00831)
+
+### This is the checkout page with form
+
+![Screenshot 2024-04-08 11 46 40](https://github.com/struk49/podgethecat/assets/115653854/1106d58d-a363-485d-8cf8-17b8eb0213fb)
+
+### Here is the form for superusers to add and edit  a product.
+
+![Screenshot 2024-04-08 11 49 54](https://github.com/struk49/podgethecat/assets/115653854/b037154e-ce1a-4f76-9733-4b687d068a86)
+
+
+
+
 
 
 
