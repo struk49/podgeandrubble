@@ -21,7 +21,7 @@ User stories
 These are the colours i used throughout the site
 ![podge-and-rubble-colours](https://github.com/struk49/podgethecat/assets/115653854/bc22e410-8ad5-42b0-a221-646706f5fb3a)
 
-#Typography
+# Typography
 The font i used is Poppins, which i got from google fonts.
 
 #Imagery
@@ -48,6 +48,14 @@ I wanted a homepage with a logo, searchbar, navbar and account links. I also wan
 ![Screenshot 2024-04-08 11 16 04](https://github.com/struk49/podgethecat/assets/115653854/a876a8cd-3f4a-4752-887f-7b4df611965d)
 
 ![Screenshot 2024-04-08 11 17 22](https://github.com/struk49/podgethecat/assets/115653854/97722146-bcaa-4fe3-b41e-bfbdc55f02bf)
+
+### Product description page
+The description page has a image of product with a description. Thier is also a rating and review for product. Users can write there own review and give the product their own rating.
+
+![Screenshot 2024-04-08 11 20 23](https://github.com/struk49/podgethecat/assets/115653854/86fac9b7-5eab-4aef-b325-7d50f2cb373f)
+
+![Screenshot 2024-04-08 11 25 14](https://github.com/struk49/podgethecat/assets/115653854/6ad5f47c-faef-4bb6-8b93-cb0e2eeef907)
+
 
 
 
