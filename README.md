@@ -92,9 +92,57 @@ Image of sign in page with form.
 7. aws
 8. heroku
 9. chrome devtools
+10. djabgo crispy forms
+11. django allauth
+12. django storages
 
-# Testing
-I used W3c markup validator
+# Tools
+1. git/github
+2. gitpod
+3. aws s3 bucket
+
+
+# Responsive Testing 
+I have tested the deployed site on  my laptop and a iphone 8.As you can see in some of the screenshots above.
+
+Chrome DevTools wasused to regularly check for any responsive design issues. Rather than only checking for specific device screen widths, I used DevTools to reduce the viewport width gradually and noted any and all issues for each width. My media queries are based on these specific pixel widths rather than typical viewport breakpoints to allow for an enjoyable experience for all users, on any devices they use.
+
+The site is responsive down to 320px viewport widths.
+
+# testing User Stories from User Experience (UX) Section
+As a First Time Visitor, I want to easily understand the main purpose of the site.
+
+Upon entering the site, users are automatically greeted with a clean and easily readable navigation bar to go to the page of their choice. Underneath, the user discovers the main content of the page.
+The main point of the site is made immediately clear with an invitation to choose which products thay wouls lokie to look at, 
+
+The user can view products and see descriptions of  the product. 
+As a First Time Visitor, I want to be able to easily be able to navigate throughout the site to find content, including on how to buy products and how i will get them. .
+
+The site has been designed to be fluid and never to entrap the user. At the top of each page there is a clean navigation bar, each link clearly describes what page they will end up on. 
+
+The navigation bar is in the fixed position and thus stays at the top of the page as the user navigates the site, allowing the user to easily switch between pages and get back to the top of the page again by clicking on the page link they are currently on.
+On smaller viewports the navigation bar remains fixed, but is reduced in size as to not take up too much space In order to access the other site pages there is a hamburger bar to the top left, when clicked the the navbar drops down to reveal the catagories. 
+
+The user can scroll to the bottom of any page on the site to locate social media links in the footer.
+
+# Further Testing
+
+The Website was tested on Google Chrome, and Safari browsers.
+
+The website was viewed on a variety of devices such as laptop, IPHONE 8,
+
+A large amount of testing was done to ensure that all pages were linking correctly.
+
+Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+
+# Deployment
+Deployed nto heroku and aws s3 bucket
+
+This site was built for educational purposes only
+
+
+
+
 
 
 
