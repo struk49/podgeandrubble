@@ -38,6 +38,21 @@ I wanted a homepage with a logo, searchbar, navbar and account links. I also wan
 
 ![Screenshot 2024-04-08 11 04 42](https://github.com/struk49/podgethecat/assets/115653854/f47dd53c-6b9a-4cd9-a225-6f24c40333da)
 
+# The products page
+### I wanted the products page to be responsive and show the products in a row of 4 on laptop and desktop, in a row 3 and 2 on tablet and 1 on mobile.
+
+![Screenshot 2024-04-08 11 12 39](https://github.com/struk49/podgethecat/assets/115653854/52a6307e-3ad8-4ae3-8b00-05ab70282c02)
+
+![Screenshot 2024-04-08 11 15 06](https://github.com/struk49/podgethecat/assets/115653854/623b436d-eaef-45be-81b9-7bd50ad08f86)
+
+![Screenshot 2024-04-08 11 16 04](https://github.com/struk49/podgethecat/assets/115653854/a876a8cd-3f4a-4752-887f-7b4df611965d)
+
+![Screenshot 2024-04-08 11 17 22](https://github.com/struk49/podgethecat/assets/115653854/97722146-bcaa-4fe3-b41e-bfbdc55f02bf)
+
+
+
+
+
 
 
 
