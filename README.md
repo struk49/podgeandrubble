@@ -27,8 +27,8 @@ The font i used is Poppins, which i got from google fonts.
 #Imagery
 The images i used are from unsplah and the the organic pantry. 
 
-#Designing and wireframes
-###The homepage 
+# Designing and wireframes
+### The homepage 
 I wanted a homepage with a logo, searchbar, navbar and account links. I also wanted some information about the site. Which will be in two sections with a footer. 
 ![Screenshot 2024-04-08 09 32 52](https://github.com/struk49/podgethecat/assets/115653854/c08120ce-9dd8-4de8-93bf-3c46ca1ad3de)
 
