@@ -63,7 +63,7 @@ Image of sign in page with form.
 
 ![Screenshot 2024-04-08 11 31 24](https://github.com/struk49/podgethecat/assets/115653854/cc1ffe0e-371f-49c7-a868-1490a6f05d48)
 
-### This is a image of the sopping basket page.
+### This is a image of the shopping basket page.
 
 ![Screenshot 2024-04-08 11 43 04](https://github.com/struk49/podgethecat/assets/115653854/902ff1d1-13ec-471b-a97d-b88e04c00831)
 
@@ -74,6 +74,32 @@ Image of sign in page with form.
 ### Here is the form for superusers to add and edit  a product.
 
 ![Screenshot 2024-04-08 11 49 54](https://github.com/struk49/podgethecat/assets/115653854/b037154e-ce1a-4f76-9733-4b687d068a86)
+
+. Technologies Used
+1. HTML
+2. CSS
+3. Javascript/Jquery
+4. django
+5. Python
+
+# Frameworks, Libraries & Programs Used
+1. google fonts
+2. font awesome
+3. bootstrap
+4. canva
+5. githib
+6. gitpod
+7. aws
+8. heroku
+9. chrome devtools
+
+# Testing
+I used W3c markup validator
+
+
+
+
+
 
 
 
