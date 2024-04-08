@@ -21,3 +21,11 @@ User stories
 These are the colours i used throughout the site
 ![podge-and-rubble-colours](https://github.com/struk49/podgethecat/assets/115653854/bc22e410-8ad5-42b0-a221-646706f5fb3a)
 
+#Typography
+The font i used is Poppins, which i got from google fonts.
+
+#Imagery
+The images i used are from unsplah and the the organic pantry. 
+
+
+
