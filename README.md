@@ -16,3 +16,8 @@ User stories
 4. Get information about enviromental issues and farming from blog articles.
 5. As a First Time Visitor, I want to easily understand the main purpose of the site.
 6. As a First Time Visitor, I want to be able to easily be able to navigate throughout the site to find products, How to open a account and leave reviews.
+
+# Design
+These are the colours i used throughout the site
+![podge-and-rubble-colours](https://github.com/struk49/podgethecat/assets/115653854/bc22e410-8ad5-42b0-a221-646706f5fb3a)
+
