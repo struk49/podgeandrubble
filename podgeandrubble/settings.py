@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'w-+r8audnz%d%ixuq#u+0vm*2#__lb7c+np@*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['podgeandrubbleveg-3192dfebb79e.herokuapp.com', 'localhost', '8000-struk49-podgeandrubble-fboqk9x0f18.ws-eu110.gitpod.io']
+ALLOWED_HOSTS = ['podgeandrubbleveg-3192dfebb79e.herokuapp.com', 'localhost', '8000-struk49-podgeandrubble-irhv9oo96xz.ws-eu110.gitpod.io']
 
 
 # Application definition
@@ -217,5 +217,17 @@ STRIPE_CURRENCY = 'gbp'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
-DEFAULT_FROM_EMAIL = 'podgeandrubble@example.com'
+
+
+if 'DEVELOPMENT' in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = 'podgeandrubble@example.com'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_USE_TLS = True
+    EMAIL_PORT = 587
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
