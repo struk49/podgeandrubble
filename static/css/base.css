@@ -127,6 +127,14 @@ span a:hover {
 
 }
 
+.bg-contact {
+    background-color: #fff !important;
+    color: #141414 ;
+    padding: 10px;
+    font-size: large;
+}
+
+
 .choose-us-section {
     padding: 4rem 0;
 }
