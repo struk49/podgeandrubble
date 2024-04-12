@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from .models import Blog_post
 from django.contrib import messages
 
@@ -30,7 +31,7 @@ def blog_detail(request, post_id):
 
     return render(request, 'blog/blog_detail.html', context)
 
-
+@login_required
 def add_post(request):
     """ Add a post to the store """
     if request.method == 'POST':
@@ -51,7 +52,7 @@ def add_post(request):
 
     return render(request, template, context)
 
-
+@login_required
 def edit_post(request, post_id):
     """ Edit a post in the store """
     post = get_object_or_404(Blog_post, pk=post_id)
@@ -75,7 +76,7 @@ def edit_post(request, post_id):
 
     return render(request, template, context)
 
-
+@login_required
 def delete_post(request, post_id):
     """ Delete a post from the store """
     post = get_object_or_404(Blog_post, pk=post_id)
