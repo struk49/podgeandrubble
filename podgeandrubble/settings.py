@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'w-+r8audnz%d%ixuq#u+0vm*2#__lb7c+np@*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['podgeandrubbleveg-3192dfebb79e.herokuapp.com', 'localhost', '8000-struk49-podgeandrubble-fbrizdax0nu.ws-eu110.gitpod.io']
+ALLOWED_HOSTS = ['podgeandrubbleveg-3192dfebb79e.herokuapp.com', 'localhost', '8000-struk49-podgeandrubble-5be41sq5qsq.ws-eu110.gitpod.io']
 
 
 # Application definition
@@ -115,7 +115,7 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
-LOGIN_REDIRECT_URL = ''
+LOGIN_REDIRECT_URL = 'products/'
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
         'SCOPE': [
